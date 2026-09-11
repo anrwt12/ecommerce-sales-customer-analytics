@@ -49,3 +49,68 @@ sales
     │ product_id
     ↓
 products
+
+
+
+## 🗄️ PostgreSQL Data Usage
+
+The raw e-commerce data is provided in CSV format and imported into PostgreSQL for analysis.
+
+### Data Flow
+
+```text
+CSV Files
+   │
+   ├── customers.csv
+   ├── products.csv
+   └── sales.csv
+          │
+          ↓
+   PostgreSQL Database
+          │
+          ├── customers table
+          ├── products table
+          └── sales table
+          │
+          ↓
+     SQL Analysis
+          │
+          ↓
+   Business Insights
+```
+
+### How PostgreSQL Uses the CSV Files
+
+1. **CSV files** contain the raw customer, product, and sales data.
+2. The files are **imported into PostgreSQL tables**.
+3. Relationships are established using keys such as `customer_id` and `product_id`.
+4. SQL queries are used to perform:
+
+   * Data quality checks
+   * Customer analysis
+   * Product and category analysis
+   * Revenue analysis
+   * Inventory risk analysis
+   * Regional analysis
+   * Cancellation and return analysis
+5. The results are converted into **business insights and recommendations**.
+
+### Example
+
+```sql
+COPY customers
+FROM '/path/customers.csv'
+DELIMITER ','
+CSV HEADER;
+```
+
+After importing the CSV, you query the PostgreSQL table:
+
+```sql
+SELECT state, SUM(total_amount) AS revenue
+FROM sales
+GROUP BY state
+ORDER BY revenue DESC;
+```
+
+**In short:** CSV → PostgreSQL Tables → SQL Analysis → Business Insights
