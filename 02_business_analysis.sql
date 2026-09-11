@@ -13,9 +13,6 @@ SUM(shipping_cost) AS total_shipping_cost,
 SUM(total_amount) AS net_revenue
 FROM sales;
 
--- Business Insight
-
--- The business generated ₹5.93B in net revenue from 250K orders and 39.9K customers, with 312K units sold.
 
 --  Q2 How has the company's revenue and order volume changed
 -- month by month, and which month performed best?
@@ -55,10 +52,6 @@ sum(Total_sales_amount) over(),2)
 AS revenue_percentage
 FROM category_sales
 ORDER BY total_sales_amount DESC;
-
--- Business Insight
-
-
 
 -- Q4 Which brands generate the highest revenue?
 
@@ -125,13 +118,6 @@ FROM  category_status
 ORDER BY cancellation_rate DESC,
 Returned_rate DESC
 
--- Business Insight
-
--- Most orders are successfully delivered, while cancellations and returns represent a smaller share.
-
--- Sports has the highest cancellation rate (5.14%), while Books has the highest return rate (5.13%).
-
--- Sports and Books need further analysis to identify the reasons for cancellations and returns.
 
 --Q6 Which Indian states and cities generate the most revenue, orders, and customers?
 
@@ -157,11 +143,6 @@ ORDER BY Total_orders DESC,Total_revenue DESC
 
 
 
--- Business Insight
-
--- UP leads at the state level with 32,631 orders and 5,208 customers, generating ₹768.35M in revenue.
--- At the city level, Madurai has the highest order volume and revenue,
--- while New Delhi generates nearly the same revenue with fewer orders, suggesting higher-value purchases.
 
 -- Q7 Who are the top 10 customers by revenue, and what percentage of total revenue do they contribute?
 
