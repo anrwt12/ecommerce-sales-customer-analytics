@@ -26,7 +26,9 @@ The goal is to transform raw e-commerce data into meaningful business insights t
 **Dataset:** Indian E-Commerce Sales Analytics Dataset  
 **Source:** Kaggle  
 **Format:** CSV  
-**Database:** PostgreSQL
+**Database:** PostgreSQL  
+
+🔗 **[Download Dataset from Kaggle](https://www.kaggle.com/datasets/)**
 
 ### Dataset Files
 
